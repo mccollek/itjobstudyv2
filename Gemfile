@@ -36,6 +36,7 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'annotate'
   gem 'better_errors'
+  gem 'pry-rails'
 end
 
 
@@ -50,3 +51,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+#Data Import
+gem 'nokogiri'

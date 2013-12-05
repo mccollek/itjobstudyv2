@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131124040652) do
+ActiveRecord::Schema.define(version: 20131124210531) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,13 +61,14 @@ ActiveRecord::Schema.define(version: 20131124040652) do
     t.integer  "seasonal_id"
     t.integer  "year"
     t.string   "period"
-    t.integer  "value"
     t.integer  "area_id"
     t.integer  "industry_id"
     t.integer  "occupation_id"
     t.integer  "data_type_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "value"
+    t.string   "original_series"
   end
 
   create_table "occupations", force: true do |t|
