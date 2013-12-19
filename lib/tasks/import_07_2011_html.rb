@@ -3,6 +3,7 @@ desc "import data from 2011"
 
 task :import => [:environment] do
   #reference BlsDataImporter class to perform work
+  BlsDataImporter.new(source: 'http://www.bls.gov/oes/2011/may/oes_nat.htm')
 end
 
 

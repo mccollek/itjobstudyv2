@@ -17,7 +17,7 @@ class BlsDataImporter
     doc.xpath('//table[1]/tbody/tr')
 
     #get first row of first table as xml
-    header_hash =  this.get_headers(doc.xpath('//table[1]/tbody/tr[1]'))
+    header_hash =  self.get_headers(doc.xpath('//table[1]/thead/tr[1]'))
 
 
     pp header_hash
@@ -36,7 +36,10 @@ class BlsDataImporter
   def get_headers (header_row)
     heading_hash = Hash.new
     header_row.first.children.each_with_index do |heading, index|
-      value = heading.children.first.text.strip!.presence
+      unhashed_value = heading.children.first
+      pp "unhashed_value: #{unhashed_value}"
+      value = unhashed_value.presence
+      pp "value: #{value}"
       heading_hash[index] = value
     end
   end
