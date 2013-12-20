@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b461f9d7-dc8c-4e4e-8c08-b0cf6c72eccc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/bls_data_importer.rb" afterPath="$PROJECT_DIR$/app/services/bls_data_importer.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/services/bls_oes_spider.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/import_07_2011_html.rb" afterPath="$PROJECT_DIR$/lib/tasks/import_07_2011_html.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -41,19 +41,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="import_07_2011_html.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="import_07_2011_html.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/tasks/import_07_2011_html.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="64" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+            <state line="13" column="7" selection-start="494" selection-end="494" vertical-scroll-proportion="0.2635135" vertical-offset="0" max-vertical-offset="888">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bls_data_importer.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bls_data_importer.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/services/bls_data_importer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="64" selection-start="828" selection-end="828" vertical-scroll-proportion="0.58947366" vertical-offset="312" max-vertical-offset="918">
+            <state line="1" column="0" selection-start="22" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bls_oes_spider.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/services/bls_oes_spider.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="26" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
               <folding />
             </state>
           </provider>
@@ -62,7 +71,25 @@
       <file leaf-file-name="occupation.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/occupation.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="54" selection-start="0" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="396">
+            <state line="16" column="58" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="industry.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/industry.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data_type.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/data_type.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="127" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
@@ -86,19 +113,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="import_05_industry.rake" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/tasks/import_05_industry.rake">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="40" selection-start="101" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="540">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="occupational_statistic.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/occupational_statistic.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="27" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="540">
+            <state line="14" column="27" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
               <folding />
             </state>
           </provider>
@@ -136,8 +154,9 @@
         <option value="$PROJECT_DIR$/lib/data/oe.data.test" />
         <option value="$PROJECT_DIR$/lib/tasks/import_06_oe_data.rake" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/lib/tasks/import_07_2011_html.rb" />
         <option value="$PROJECT_DIR$/app/services/bls_data_importer.rb" />
+        <option value="$PROJECT_DIR$/app/services/bls_oes_spider.rb" />
+        <option value="$PROJECT_DIR$/lib/tasks/import_07_2011_html.rb" />
       </list>
     </option>
   </component>
@@ -189,7 +208,38 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Problems" />
+        <subPane subId="Tests" />
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Changed Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="itjobstudyv2">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -219,6 +269,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -375,21 +443,25 @@
       <created>1386793080696</created>
       <updated>1386793080696</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="retrieving 2011 header row">
+      <created>1387487241203</created>
+      <updated>1387487241203</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34623432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34623432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837301" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.6708595" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30458817" sideWeight="0.6708595" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31232727" sideWeight="0.6708595" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -419,12 +491,76 @@
     <MESSAGE value="datatype import" />
     <MESSAGE value="interim check-in" />
     <MESSAGE value="interim check-in for data import.  Move data import code from rake task to BlsDataImporter class to improve reusability." />
-    <option name="LAST_COMMIT_MESSAGE" value="interim check-in for data import.  Move data import code from rake task to BlsDataImporter class to improve reusability." />
+    <MESSAGE value="retrieving 2011 header row" />
+    <option name="LAST_COMMIT_MESSAGE" value="retrieving 2011 header row" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/models/occupational_statistic.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="27" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/import_06_oe_data.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="14" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/import_07_2011_html.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="64" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="342">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/bls_data_importer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="64" selection-start="828" selection-end="828" vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/occupation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="54" selection-start="0" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="396">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="0" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.0" vertical-offset="1008" max-vertical-offset="1116">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131124204229_change_occupational_statistic.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="36" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="216">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/import_05_industry.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="40" selection-start="101" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/occupational_statistic.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="27" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/import_06_oe_data.rake">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="14" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
@@ -616,11 +752,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/data_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20131124210531_add_original_series_to_occupational_statistic.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
@@ -634,13 +765,6 @@
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="0" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/occupational_statistic.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
@@ -667,9 +791,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/industry.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/occupation.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="54" selection-start="0" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state line="16" column="58" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/occupational_statistic.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="27" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/data_type.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="127" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/bls_data_importer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="22" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/bls_oes_spider.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="26" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
           <folding />
         </state>
       </provider>
@@ -683,14 +842,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/import_07_2011_html.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="64" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/bls_data_importer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="64" selection-start="828" selection-end="828" vertical-scroll-proportion="0.58947366" vertical-offset="312" max-vertical-offset="918">
+        <state line="13" column="7" selection-start="494" selection-end="494" vertical-scroll-proportion="0.2635135" vertical-offset="0" max-vertical-offset="888">
           <folding />
         </state>
       </provider>
