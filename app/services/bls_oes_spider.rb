@@ -21,7 +21,7 @@ class BlsOesSpider
     results = doc.xpath('//a[contains(text(), "HTML")]')
     results.each do |result|
       high_level_url =  result.attributes.first[1].value
-      if high_level_url.count('may')>0    #I don't want the november numbers or anything before 2003
+      if high_level_url.count('may')>0    #I don't want the november numbers, 2012 (already imported via csv) or anything before 2003
         child_obj = BlsOesSpider.new(source: 'http://www.bls.gov' + high_level_url)
         print "looking at #{child_obj.source_page} \n"
         if child_obj.has_data?

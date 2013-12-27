@@ -2,17 +2,18 @@
 #
 # Table name: occupational_statistics
 #
-#  id            :integer          not null, primary key
-#  seasonal_id   :integer
-#  year          :integer
-#  period        :string(255)
-#  value         :integer
-#  area_id       :integer
-#  industry_id   :integer
-#  occupation_id :integer
-#  data_type_id  :integer
-#  created_at    :datetime
-#  updated_at    :datetime
+#  id              :integer          not null, primary key
+#  seasonal_id     :integer
+#  year            :integer
+#  period          :string(255)
+#  area_id         :integer
+#  industry_id     :integer
+#  occupation_id   :integer
+#  data_type_id    :integer
+#  created_at      :datetime
+#  updated_at      :datetime
+#  value           :decimal(, )
+#  original_series :string(255)
 #
 
 class OccupationalStatistic < ActiveRecord::Base

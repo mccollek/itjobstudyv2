@@ -9,9 +9,9 @@ task :import => [:environment] do
   statistic_pages = []
   candidate_pages.each do |page|
     directory_elements = page.split("/")
-    data_year = directory_elements[2].to_i #leaves 'current_year' as 0
+    data_year = directory_elements[2].to_i #leaves 'current_year' as 0, I've already imported 2012 and don't want it.
     data_month = directory_elements[3]
-    if data_year > 2002 && data_month == 'may'
+    if data_year > 2003 && data_month == 'may'  # I don't want November numbers
       puts "page #{page} has a year of #{data_year}\n"
       statistic_pages.push(year: data_year, page_source: "http://bls.gov"+page)
     end

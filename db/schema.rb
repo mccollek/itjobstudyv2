@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131124210531) do
+ActiveRecord::Schema.define(version: 20131227203621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(version: 20131124210531) do
     t.integer  "area_type_id"
     t.string   "name"
     t.string   "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bls_column_mappers", force: true do |t|
+    t.string   "web_column_name"
+    t.string   "application_object_attribute"
+    t.string   "application_object"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
