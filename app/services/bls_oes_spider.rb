@@ -22,13 +22,17 @@ class BlsOesSpider
     results.each do |result|
       high_level_url =  result.attributes.first[1].value
       if high_level_url.count('may')>0    #I don't want the november numbers or anything before 2003
-        child_obj = BlsOesSpider.new(source: 'http://www.bls.gov' + high_level_ur)
+        child_obj = BlsOesSpider.new(source: 'http://www.bls.gov' + high_level_url)
         print "looking at #{child_obj.source_page} \n"
         if child_obj.has_data?
           self.add_candidate(child_obj.source_page)
         else
           child_doc = child_obj.open_source
           state_list = child_doc.xpath('//blockquote/li/a')
+          #bad hack for 2004 national data... going to ignore for now as has_data wouldn't work anyway
+          #if child_obj.source_page = "http://www.bls.gov/oes/2004/may/oes_nat.htm"
+          #  state_list = child_doc.xpath('//ul[preceding-sibling::p]/li/a')
+          #end
           unless state_list.nil?
             child_path = Pathname.new(child_obj.source_page)
             state_dir = child_path.dirname.to_s
@@ -61,7 +65,7 @@ class BlsOesSpider
   end
 
   def has_data?
-    #TODO: works for 2011-2013... have to fix with 2010
+
     doc = self.open_source
 
     if doc.at_xpath('//td[preceding-sibling::td[text()="00-0000"]]/text()').present?
