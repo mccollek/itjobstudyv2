@@ -37,6 +37,7 @@ group :test, :development do
   gem 'annotate'
   gem 'better_errors'
   gem 'pry-rails'
+  gem 'debugger' unless ENV["RM_INFO"]
 end
 
 

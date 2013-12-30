@@ -11,4 +11,5 @@
 #
 
 class BlsColumnMapper < ActiveRecord::Base
+  belongs_to :data_type
 end
