@@ -1,0 +1,33 @@
+<h1>Listing bls_column_mappers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Web Column Name</th>
+      <th>App Object</th>
+      <th>App Object Attribute</th>
+      <th>Data Type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bls_column_mappers.each do |bls_column_mapper| %>
+      <tr>
+        <td><%=bls_column_mapper.web_column_name %> </td>
+        <td><%=bls_column_mapper.application_object %> </td>
+        <td><%=bls_column_mapper.application_object_attribute %> </td>
+        <td><%= bls_column_mapper.data_type.present? ? bls_column_mapper.data_type.name : "" %> </td>
+        <td><%= link_to 'Show', bls_column_mapper %></td>
+        <td><%= link_to 'Edit', edit_bls_column_mapper_path(bls_column_mapper) %></td>
+        <td><%= link_to 'Destroy', bls_column_mapper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bls column mapper', new_bls_column_mapper_path %>

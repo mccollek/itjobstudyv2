@@ -53,4 +53,6 @@ Itjobstudyv2::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  resources :bls_column_mappers
 end

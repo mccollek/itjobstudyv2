@@ -46,7 +46,7 @@ class BlsOesSpider
               state_page = BlsOesSpider.new(source: state_url)
               print "looking at lower level #{state_page.source_page} \n"
               if state_page.has_data?
-                self.add_candidate(state_page)
+                self.add_candidate(state_page.source_page)
               end
             end
           end

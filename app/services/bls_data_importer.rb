@@ -16,6 +16,36 @@ class BlsDataImporter
     doc = self.open_source
     headers = self.find_header(doc)
     columns = self.get_headers(headers)
+    rows = doc.xpath('//table[1]/tbody/tr')
+    rows.each do |row|
+      if row.children.first.text() =~ /\d{2}-\d{4}/
+        statistic_attributes = []
+        row.children.each_with_index do |child, index|
+          value = child.text()
+          if column_mapping = BlsColumnMapper.find_by_web_column_name(columns[index])
+            if column_mapping.application_object != 'skip'
+              if column_mapping.application_object == 'Occupation' && column_mapping.application_object_attribute == 'code'
+                value = Occupation.convert_code(value)
+              end
+              statistic_attributes[index]={
+                  'object': column_mapping.application_object,
+                  'attribute': column_mapping.application_object_attribute,
+                  'value': value
+              }
+            else
+              os = OccupationalStatistic.new
+              statistic_attributes.each do |statistic_attribute_set|
+                os.send("#{statistic_attribute_set['object'].downcase}=", statistic_attribute_set['object'].constantize.where(statistic_attribute_set['attribute']: statistic_attribute_set['value'])
+              end
+              os.value=value
+              os.year = self.year
+              os.area = self.area
+              os.save!
+            end
+          end
+        end
+      end
+    end
     #get all rows of first table as xml
     #doc.xpath('//table[1]/tbody/tr')
     #get first row of first table as xml
@@ -58,21 +88,23 @@ class BlsDataImporter
     new_columns = Array.new
     header_row.each_with_index do |heading, index|
       unhashed_value = heading
-      pp "unhashed_value: #{unhashed_value}"
-      value = unhashed_value.presence
-      pp "value: #{value}"
+      p "unhashed_value: #{unhashed_value}"
+      value = unhashed_value.presence.downcase!
+      p "value: #{value}"
       unless BlsColumnMapper.exists?(web_column_name: value)
-        BlsColumnMapper.create!(web_column_name: value.downcase!)
+        BlsColumnMapper.create!(web_column_name: value)
         new_columns.push value
       end
       heading_hash[index] = value
     end
-    if new_columns.count>0
-      response =  "the following fields were added.  Go map them before continuing: \r\n"
-      #debugger
-      new_columns.each { |web_header| response << web_header << "\r\n"}
-      raise response
-    end
+    #if new_columns.count>0
+    #  response =  "the following fields were added.  Go map them before continuing: \r\n"
+    #  #debugger
+    #  new_columns.each { |web_header| response << web_header << "\r\n"}
+    #  raise response
+    #end
     return heading_hash
   end
+
+  def clean_area
 end

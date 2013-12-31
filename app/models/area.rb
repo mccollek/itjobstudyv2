@@ -13,4 +13,18 @@
 
 class Area < ActiveRecord::Base
   belongs_to :area_type
+
+  def self.parse_area(attribute)
+    if attribute =~ /^[a-zA-Z]*/
+      found_area = self.where(state: attribute).take!
+      found_area ||= self.where(name: attribute).take!
+    else
+      found_area = self.where(code: attribute).take!
+    end
+    if found_area.present?
+      return found_area
+    else
+      raise('no area found')
+    end
+  end
 end

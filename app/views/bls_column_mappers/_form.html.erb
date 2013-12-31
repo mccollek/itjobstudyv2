@@ -1,0 +1,34 @@
+<%= form_for(@bls_column_mapper) do |f| %>
+  <% if @bls_column_mapper.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bls_column_mapper.errors.count, "error") %> prohibited this bls_column_mapper from being saved:</h2>
+
+      <ul>
+
+      <% @bls_column_mapper.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="field control-group">
+      <%= f.label :web_column_name, :class=>"control-label" %>
+      <div class="control"><%= f.text_field :web_column_name %></div>
+    </div>
+    <div class="field control-group">
+      <%= f.label :application_object, :class=>"control-label" %>
+      <div class="control"><%= f.text_field :application_object %></div>
+    </div>
+    <div class="field control-group">
+      <%= f.label :application_object_attribute, :class=>"control-label" %>
+      <div class="control"><%= f.text_field :application_object_attribute %></div>
+    </div>
+    <div class="field control-group">
+      <%= f.label :data_type, :class=>"control-label" %>
+      <div class="control"><%= f.collection_select(:data_type_id, DataType.all, :id, :name) %></div>
+    </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

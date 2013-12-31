@@ -13,4 +13,8 @@
 #
 
 class Occupation < ActiveRecord::Base
+  def self.convert_code(value)
+    stringed_code = value.gsub("-","")
+    stringed_code.to_i
+  end
 end
