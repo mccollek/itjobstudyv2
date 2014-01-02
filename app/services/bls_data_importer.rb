@@ -16,51 +16,50 @@ class BlsDataImporter
     doc = self.open_source
     headers = self.find_header(doc)
     columns = self.get_headers(headers)
-    rows = doc.xpath('//table[1]/tbody/tr')
+    rows =  doc.xpath("//td[@class='main-content']//table//tr")
     rows.each do |row|
+      pp "working on row #{row} \n"
+      #debugger
       if row.children.first.text() =~ /\d{2}-\d{4}/
         statistic_attributes = []
-        row.children.each_with_index do |child, index|
+        row.xpath('child::*').each_with_index do |child, index|
           value = child.text()
           if column_mapping = BlsColumnMapper.find_by_web_column_name(columns[index])
             if column_mapping.application_object != 'skip'
-              if column_mapping.application_object == 'Occupation' && column_mapping.application_object_attribute == 'code'
-                value = Occupation.convert_code(value)
+              if column_mapping.application_object_attribute != 'value'
+                if column_mapping.application_object == 'Occupation' && column_mapping.application_object_attribute == 'code'
+                  value = Occupation.convert_code(value)
+                end
+                statistic_attributes[index]={
+                    stat_object: column_mapping.application_object,
+                    stat_attribute: column_mapping.application_object_attribute,
+                    stat_value: value }
+              else
+                data_type = column_mapping.data_type
+                value_final = clean_value(value)
+                p "about to check for a stat of type #{data_type.name} with value #{value_final} \n"
+
+
+                os = OccupationalStatistic.find_or_initialize_by(data_type: data_type, value: value_final, year: self.year, area: self.area, occupation: Occupation.where(code: statistic_attributes[0][:stat_value]).first)
+                if os.new_record?
+                  statistic_attributes.each do |statistic_attribute_set|
+
+                    os.send("#{statistic_attribute_set[:stat_object].downcase}=",
+                            statistic_attribute_set[:stat_object].constantize.where(statistic_attribute_set[:stat_attribute].to_sym => statistic_attribute_set[:stat_value]).first)
+                  end
+                  p "about to save the following stat: \n"
+                  pp os
+                  #debugger
+                  os.save!
+                else
+                  p "record of type #{data_type.name} with value #{value_final}  already exists \n"
+                end
               end
-              statistic_attributes[index]={
-                  'object': column_mapping.application_object,
-                  'attribute': column_mapping.application_object_attribute,
-                  'value': value
-              }
-            else
-              os = OccupationalStatistic.new
-              statistic_attributes.each do |statistic_attribute_set|
-                os.send("#{statistic_attribute_set['object'].downcase}=", statistic_attribute_set['object'].constantize.where(statistic_attribute_set['attribute']: statistic_attribute_set['value'])
-              end
-              os.value=value
-              os.year = self.year
-              os.area = self.area
-              os.save!
             end
           end
         end
       end
     end
-    #get all rows of first table as xml
-    #doc.xpath('//table[1]/tbody/tr')
-    #get first row of first table as xml
-    #header_hash =  self.get_headers(doc.xpath('//table[1]/thead/tr[1]'))
-    #pp header_hash
-    ##get the string value of the first cell of the first row
-    #first_val = doc.xpath('//table[1]/tbody/tr[1]/td[1]/text()').to_s
-    #print "\n \n first value of page #{self.source} for year #{year} is #{first_val} \n\n"
-    #find the row that starts with 'Occupation Code' in the first cell
-
-    #for each subsequent row, if column[0] = '??-????'
-      # eval column[0] to determine occupation
-      # insert a row where
-        # year = file year
-        # period =  S01
   end
 
   def open_source
@@ -106,5 +105,23 @@ class BlsDataImporter
     return heading_hash
   end
 
-  def clean_area
+  def area
+    uri = URI(self.source).to_s
+    code = /_(\w+)\./.match(uri)[1]
+    case code.length
+      when 2
+        area = Area.where(state: code.upcase).first
+      when 3
+        area = Area.find(1)
+      when 5
+        area = Area.where(code: code.to_i).first
+      else
+        raise("Can't find the area!!")
+    end
+    return area
+  end
+
+  def clean_value(value)
+    value.gsub(",", "").gsub("%", "").gsub("$", "").to_f
+  end
 end
