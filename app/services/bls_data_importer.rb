@@ -22,13 +22,22 @@ class BlsDataImporter
       #debugger
       if row.children.first.text() =~ /\d{2}-\d{4}/
         statistic_attributes = []
+        occ_value = ''
         row.xpath('child::*').each_with_index do |child, index|
           value = child.text()
           if column_mapping = BlsColumnMapper.find_by_web_column_name(columns[index])
+            if column_mapping.application_object_attribute == 'name'
+              if Occupation.where(code: occ_value).empty?
+                #debugger
+                Occupation.create(code: occ_value, name: value)
+                p "created new occupation #{value} with code #{occ_value} \n"
+              end
+            end
             if column_mapping.application_object != 'skip'
               if column_mapping.application_object_attribute != 'value'
                 if column_mapping.application_object == 'Occupation' && column_mapping.application_object_attribute == 'code'
                   value = Occupation.convert_code(value)
+                  occ_value = value
                 end
                 statistic_attributes[index]={
                     stat_object: column_mapping.application_object,

@@ -51,9 +51,12 @@ class BlsOesSpider
             end
           end
         end
+        print "we now have #{self.candidate_pages.count} candidate pages \n"
+
       end
-      print "we now have #{self.candidate_pages.count} candidate pages \n"
     end
+    debugger
+    return self.candidate_pages
   end
 
   def reset_candidate_pages
