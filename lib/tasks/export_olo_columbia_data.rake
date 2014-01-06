@@ -1,8 +1,8 @@
 require 'csv'
 
-desc "Import IT-oLogy IT Communications"
+desc "Export IT-oLogy Columbia Data"
 task :export_olo_columbia_data => [:environment] do
-  data_file = 'lib/data/wiggins/data.csv'
+  data_file = 'lib/data/olo_cae/data.csv'
   CSV.open(data_file, "wb") do |row|
     OccupationalStatistic.where(area_id: [1,584],
                               year: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
