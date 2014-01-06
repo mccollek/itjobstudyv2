@@ -1,0 +1,27 @@
+<h1>Listing report_criteria</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @report_criteria.each do |report_criterium| %>
+      <tr>
+        <td><%= report_criterium.title %></td>
+        <td><%= link_to 'Show', report_criterium %></td>
+        <td><%= link_to 'Edit', edit_report_criterium_path(report_criterium) %></td>
+        <td><%= link_to 'Destroy', report_criterium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Report criterium', new_report_criterium_path %>

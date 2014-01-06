@@ -2,12 +2,6 @@ require 'csv'
 
 desc "Import Area from txt file"
 task :import => [:environment] do
-  #unless Role.all.count > 0
-  #  r = Role.create(name:'Admin')
-  #  r.save
-  #  r = Role.create(:name=>'User')
-  #  r.save
-  #end
   unless Area.all.count > 0
     file = "lib/data/oe.area"
 

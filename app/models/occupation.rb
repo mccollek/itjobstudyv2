@@ -13,6 +13,7 @@
 #
 
 class Occupation < ActiveRecord::Base
+  has_many :report_criteriums, as: :criteriable
   def self.convert_code(value)
     stringed_code = value.gsub("-","")
     stringed_code.to_i

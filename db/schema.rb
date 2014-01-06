@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131230185446) do
+ActiveRecord::Schema.define(version: 20140106132018) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,21 @@ ActiveRecord::Schema.define(version: 20131230185446) do
     t.integer  "display_level"
     t.boolean  "selectable"
     t.integer  "sort_sequence"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "report_criteria", force: true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "report_id"
+    t.integer  "criteriable_id"
+    t.string   "criteriable_type"
+  end
+
+  create_table "reports", force: true do |t|
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

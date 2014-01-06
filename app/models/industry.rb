@@ -13,4 +13,5 @@
 #
 
 class Industry < ActiveRecord::Base
+  has_many :report_criteriums, as: :criteriable
 end
