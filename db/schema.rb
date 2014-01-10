@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140106132018) do
+ActiveRecord::Schema.define(version: 20140110142043) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,7 +47,11 @@ ActiveRecord::Schema.define(version: 20140106132018) do
     t.integer  "footnote_code"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "data_category"
   end
+
+  add_index "data_types", ["code"], name: "index_data_types_on_code", using: :btree
+  add_index "data_types", ["data_category"], name: "index_data_types_on_data_category", using: :btree
 
   create_table "industries", force: true do |t|
     t.integer  "code"
@@ -57,6 +61,7 @@ ActiveRecord::Schema.define(version: 20140106132018) do
     t.integer  "sort_sequence"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "ce_code"
   end
 
   create_table "occupation_groups", force: true do |t|
@@ -79,6 +84,11 @@ ActiveRecord::Schema.define(version: 20140106132018) do
     t.decimal  "value"
     t.string   "original_series"
   end
+
+  add_index "occupational_statistics", ["area_id"], name: "index_occupational_statistics_on_area_id", using: :btree
+  add_index "occupational_statistics", ["data_type_id"], name: "index_occupational_statistics_on_data_type_id", using: :btree
+  add_index "occupational_statistics", ["industry_id"], name: "index_occupational_statistics_on_industry_id", using: :btree
+  add_index "occupational_statistics", ["occupation_id"], name: "index_occupational_statistics_on_occupation_id", using: :btree
 
   create_table "occupations", force: true do |t|
     t.integer  "code"

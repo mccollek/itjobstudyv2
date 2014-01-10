@@ -10,6 +10,7 @@
 #  sort_sequence :integer
 #  created_at    :datetime
 #  updated_at    :datetime
+#  ce_code       :integer
 #
 
 class Industry < ActiveRecord::Base

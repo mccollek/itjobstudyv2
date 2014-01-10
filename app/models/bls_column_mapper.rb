@@ -8,6 +8,7 @@
 #  application_object           :string(255)
 #  created_at                   :datetime
 #  updated_at                   :datetime
+#  data_type_id                 :integer
 #
 
 class BlsColumnMapper < ActiveRecord::Base

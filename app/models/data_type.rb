@@ -8,6 +8,7 @@
 #  footnote_code :integer
 #  created_at    :datetime
 #  updated_at    :datetime
+#  data_category :string(255)
 #
 
 class DataType < ActiveRecord::Base

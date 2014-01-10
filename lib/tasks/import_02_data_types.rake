@@ -16,6 +16,7 @@ task :import => [:environment] do
       puts "Importing Data Type " + row[1]
       dt.code = row[0]
       dt.name = row[1]
+      dt.data_category = 'OES'
       dt.save
     end
   end
