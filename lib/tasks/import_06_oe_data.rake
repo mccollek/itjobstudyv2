@@ -18,7 +18,7 @@ task :import => [:environment] do
       puts "importing series id: #{series_id} "
       d.original_series = series_id
       d.area = Area.find_by_code(series_id[4..10])
-      d.industry = Industry.where(code: series_id[11..16].gsub("-", "0").to_i, data_category: 'occupation').first
+      d.industry = Industry.where(code: series_id[11..16].gsub("-", "0").to_i).first
       d.occupation = Occupation.find_by_code(series_id[17..22])
       d.data_type = DataType.where(code: series_id[11..12], data_category: 'OES').first
       d.year = row[1]
