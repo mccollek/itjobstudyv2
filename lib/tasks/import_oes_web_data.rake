@@ -1,7 +1,7 @@
 
 desc "import data from 2011"
 
-task :import_bls => [:environment] do
+task :import_oes_web_data => [:environment] do
   statistic_pages = []
   unless File.exists?('lib/data/pages_file')
     ##reference BlsDataImporter class to perform work

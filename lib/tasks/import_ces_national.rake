@@ -5,7 +5,6 @@ task :import_ces_national => [:environment] do
     file = "lib/data/ce.data.0.AllCESSeries"
     #file = "lib/data/ce_national_test" # test file
     p "Importing CES National data"
-
     CSV.foreach(file, :headers => true, :col_sep => "\t" ) do |row|
       d = OccupationalStatistic.new
       series_id = row[0].gsub(' ', '')
