@@ -18,7 +18,7 @@ task :import_oes_web_data => [:environment] do
     end
     File.open('lib/data/pages_file', 'w') {|f| JSON.dump(statistic_pages, f)}
   else
-    File.open('lib/data/sc_file', 'r') {|f| statistic_pages = JSON.load(f)}
+    File.open('lib/data/pages_file', 'r') {|f| statistic_pages = JSON.load(f)}
   end
   #debugger
   statistic_pages.each do |statistic_page|

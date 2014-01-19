@@ -2,7 +2,7 @@ require 'csv'
 
 desc "Import the known column mappings for the CES and OES imports"
 task :import => [:environment] do
-  file = "lib/data/cls_column_mappers.csv"
+  file = "lib/data/bls_column_mappers.csv"
   puts "Importing BLS Column Data"
   CSV.foreach(file, :headers => true, :col_sep => "\t" ) do |row|
     BlsColumnMapper.first_or_create(
