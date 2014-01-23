@@ -6,7 +6,7 @@
 #  seasonal_id     :integer
 #  year            :integer
 #  period          :string(255)
-#  area_id         :integer
+#  area_id           :integer
 #  industry_id     :integer
 #  occupation_id   :integer
 #  data_type_id    :integer

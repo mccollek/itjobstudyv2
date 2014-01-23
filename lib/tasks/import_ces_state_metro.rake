@@ -2,10 +2,10 @@ require 'csv'
 
 desc "Import State and Metro Current Employment Statistics from txt file"
 task :import_ces_state_metro => [:environment] do
-    file = "lib/data/sm.0.data.Current"
+    file = "lib/data/sm.data.0.Current"
     #file = "lib/data/sm_test" # test file
     p "Importing CES state & Metro data"
-    only_data_type = DataType.where(code: 1).first  #only one data type in the sm file, save myself the lookup
+    only_data_type = DataType.where(code: 1, data_category: 'CES').first  #only one data type in the sm file, save myself the lookup
     CSV.foreach(file, :headers => true, :col_sep => "\t" ) do |row|
       series_id = row[0].gsub(' ', '')
       d = OccupationalStatistic.new
