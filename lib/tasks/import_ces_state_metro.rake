@@ -5,7 +5,6 @@ task :import_ces_state_metro => [:environment] do
     file = "lib/data/sm.data.0.Current"
     #file = "lib/data/sm_test" # test file
     p "Importing CES state & Metro data"
-    only_data_type = DataType.where(code: 1, data_category: 'CES').first  #only one data type in the sm file, save myself the lookup
     CSV.foreach(file, :headers => true, :col_sep => "\t" ) do |row|
       series_id = row[0].gsub(' ', '')
       d = OccupationalStatistic.new
@@ -18,8 +17,16 @@ task :import_ces_state_metro => [:environment] do
       else
         d.area =Area.where(code: tmp_area).first
       end
-      d.industry = Industry.where(code: series_id[10..17].to_i).first
-      d.data_type = only_data_type
+      naics_code = series_id[12..17].to_i
+      if naics_code == 0  #summary codes
+        naics = series_id[10..17].to_i
+        p "summary code "
+      else                  #everything else
+        naics = naics_code
+        p "real "
+      end
+      d.industry = Industry.where(code: naics).first
+      d.data_type = DataType.where(code: os.original_series[-2..-1].to_i, data_category: 'ces')
       d.year = row[1]
       d.period = row[2]
       d.value = row[3]

@@ -10,6 +10,7 @@ task :export_olo_columbia_data => [:environment] do
                               period: ['S01', NIL],
                               industry_id: [1, NIL],
                               occupation_id: Report.last.occupations.to_a).each do |stat|
+      puts "oes stat #{stat.occupation.name + ' ' + stat.year.to_s} for data type 1"
       row << [stat.year, stat.area.name, stat.occupation.code, stat.occupation.name, stat.data_type.name, stat.value, 'OES']
     end
     OccupationalStatistic.where(area_id: [1,584],
@@ -18,23 +19,25 @@ task :export_olo_columbia_data => [:environment] do
                               period: ['S01', NIL],
                               industry_id: [1, NIL],
                               occupation_id: Report.last.occupations.to_a).each do |stat|
+      puts "oes stat #{stat.occupation.name + ' ' + stat.year.to_s} for data type 4"
       row << [stat.year, stat.area.name, stat.occupation.code, stat.occupation.name, stat.data_type.name, stat.value, 'OES']
     end
     OccupationalStatistic.where(area_id: [1,584],
                                 year: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
-                                data_type_id: DataType.where(code: 3, data_category: 'CES').first.id,
-                                period: 'M09',
+                                data_type_id: 37,
+                                period: 'M12',
                                 industry_id: Report.last.industries.to_a).each do |stat|
-      puts "ces stat #{stat.industry.name + ' ' + stat.year}"
-      row << [stat.year, stat.area.name, stat.industry.code, stat.industry.name, stat.data_type.name, stat.value*40*52, 'CES']
+      puts "ces stat #{stat.industry.name + ' ' + stat.year.to_s} for data type 37"
+      row << [stat.year, stat.area.name, stat.industry.code, stat.industry.name, 'annual mean wage', (stat.value*4).to_s, 'CES']
     end
 
     OccupationalStatistic.where(area_id: [1,584],
                                 year: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
                                 data_type_id: DataType.where(code: 1, data_category: 'CES').first.id,
-                                period: 'M09',
+                                period: 'M12',
                                 industry_id: Report.last.industries.to_a).each do |stat|
-      row << [stat.year, stat.area.name, stat.industry.code, stat.industry.name, stat.data_type.name, stat.value, 'CES']
+      puts "ces stat #{stat.industry.name + ' ' + stat.year.to_s} for data type 1"
+      row << [stat.year, stat.area.name, stat.industry.code, stat.industry.name, 'employment', stat.value, 'CES']
     end
   end
 end

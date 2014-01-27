@@ -11,7 +11,15 @@ task :import_ces_national => [:environment] do
       p "importing series id: #{series_id} "
       d.original_series = series_id
       d.area_id = 1
-      d.industry = Industry.where(code: series_id[3..10].to_i).first
+      naics_code = series_id[5..10].to_i
+      if naics_code == 0  #summary codes
+        naics = series_id[3..10].to_i
+        p "summary code "
+      else                  #everything else
+        naics = naics_code
+        p "real "
+      end
+      d.industry = Industry.where(code: naics).first
       d.data_type = DataType.where(code: series_id[11..12], data_category: 'CES').first
       d.year = row[1]
       d.period = row[2]
