@@ -26,7 +26,7 @@ task :import_ces_state_metro => [:environment] do
         p "real "
       end
       d.industry = Industry.where(code: naics).first
-      d.data_type = DataType.where(code: os.original_series[-2..-1].to_i, data_category: 'ces')
+      d.data_type = DataType.where(code: d.original_series[-2..-1].to_i, data_category: 'ces')
       d.year = row[1]
       d.period = row[2]
       d.value = row[3]
