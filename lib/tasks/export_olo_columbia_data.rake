@@ -24,11 +24,11 @@ task :export_olo_columbia_data => [:environment] do
     end
     OccupationalStatistic.where(area_id: [1,584],
                                 year: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
-                                data_type_id: 37,
+                                data_type_id: DataType.where(code:11, data_category: 'CES'),
                                 period: 'M12',
                                 industry_id: Report.last.industries.to_a).each do |stat|
       puts "ces stat #{stat.industry.name + ' ' + stat.year.to_s} for data type 37"
-      row << [stat.year, stat.area.name, stat.industry.code, stat.industry.name, 'annual mean wage', (stat.value*4).to_s, 'CES']
+      row << [stat.year, stat.area.name, stat.industry.code, stat.industry.name, 'average annual wage', (stat.value*52).to_s, 'CES']
     end
 
     OccupationalStatistic.where(area_id: [1,584],

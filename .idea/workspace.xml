@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3a6c81d-f8f1-46a0-bcf5-3045f2057d19" name="Default" comment="Fix minor bug in ces_state_metro import&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.rspec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/factories/areas.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/factories/occupations.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
+    <list default="true" id="f3a6c81d-f8f1-46a0-bcf5-3045f2057d19" name="Default" comment="Create occupation rspec test&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/bls_column_mapper_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/ce.datatype" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/ce.footnote" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/ce.industry" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/ce.period" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/ce.seasonal" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/ce.series" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/ce.supersector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/it_occupations.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.area" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.areatype" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.datatype" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.industry" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.occugroup" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.occupation" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.seasonal" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.statemsa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/report_criterium_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/report_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/sm.area" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/sm.data_type" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/sm.industry" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/sm.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/states.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/occupation.rb" afterPath="$PROJECT_DIR$/app/models/occupation.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/occupation_spec.rb" afterPath="$PROJECT_DIR$/spec/models/occupation_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/export_olo_columbia_data.rake" afterPath="$PROJECT_DIR$/lib/tasks/export_olo_columbia_data.rake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/itjobstudyv2.iml" afterPath="$PROJECT_DIR$/.idea/itjobstudyv2.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="itjobstudyv2.iws" />
@@ -38,46 +58,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="reports_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="reports_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="90" selection-start="1477" selection-end="1477" vertical-scroll-proportion="0.66090715" vertical-offset="468" max-vertical-offset="1440">
+            <state line="46" column="10" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="1440">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="occupation_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/models/occupation_spec.rb">
+      <file leaf-file-name="export_olo_columbia_data.rake" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/export_olo_columbia_data.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="64" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="756">
+            <state line="28" column="73" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="882">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="areas.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/factories/areas.rb">
+      <file leaf-file-name="sm.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/data/sm.txt">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="87" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="252">
+            <state line="19" column="0" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="8352">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <file leaf-file-name="ce.datatype" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/data/ce.datatype">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="7" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="432">
+            <state line="11" column="0" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="846">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="area.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/area.rb">
+      <file leaf-file-name="data_type.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/data_type.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="7" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="648">
+            <state line="3" column="1" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="378">
               <folding />
             </state>
           </provider>
@@ -86,7 +112,43 @@
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="60" selection-start="1220" selection-end="1220" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="1314">
+            <state line="46" column="0" selection-start="1139" selection-end="1224" vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="1314">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="occupation_spec.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spec/models/occupation_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="50" selection-start="942" selection-end="942" vertical-scroll-proportion="0.7192009" vertical-offset="0" max-vertical-offset="901">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="areas.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/factories/areas.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="3" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="252">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spec_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="5" selection-start="1789" selection-end="1789" vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="1008">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="area_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/models/area_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
               <folding />
             </state>
           </provider>
@@ -105,7 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20140106130348_create_report_criteria.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140106131809_create_reports.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140106132018_add_ids_to_report_criterium.rb" />
         <option value="$PROJECT_DIR$/app/models/industry.rb" />
@@ -140,7 +201,6 @@
         <option value="$PROJECT_DIR$/lib/tasks/import_09_ce_industry.rake" />
         <option value="$PROJECT_DIR$/lib/tasks/import_01_areas.rake" />
         <option value="$PROJECT_DIR$/lib/tasks/import_ces_national.rake" />
-        <option value="$PROJECT_DIR$/lib/tasks/export_olo_columbia_data.rake" />
         <option value="$PROJECT_DIR$/lib/data/wiggins/data.csv" />
         <option value="$PROJECT_DIR$/lib/tasks/fix_smu_data_type.rake" />
         <option value="$PROJECT_DIR$/lib/tasks/fix_oeu_data_type.rake" />
@@ -150,19 +210,21 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/.rspec" />
         <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/spec/factories/occupations.rb" />
         <option value="$PROJECT_DIR$/app/models/occupation.rb" />
         <option value="$PROJECT_DIR$/spec/models/occupation_spec.rb" />
         <option value="$PROJECT_DIR$/spec/factories/areas.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/lib/tasks/export_olo_columbia_data.rake" />
+        <option value="$PROJECT_DIR$/lib/data/sm.data_type" />
+        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
+    <option name="x" value="64" />
     <option name="y" value="-4" />
-    <option name="width" value="1922" />
+    <option name="width" value="1857" />
     <option name="height" value="1085" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -210,48 +272,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itjobstudyv2" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itjobstudyv2" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itjobstudyv2" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itjobstudyv2" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lib" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.LibFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itjobstudyv2" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itjobstudyv2" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lib" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.LibFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.FolderSubFolderNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -284,6 +310,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="log" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -298,39 +374,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itjobstudyv2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itjobstudyv2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itjobstudyv2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itjobstudyv2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="initializers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -430,12 +506,48 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
+      <pane id="RailsProjectView">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lib" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.LibFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itjobstudyv2" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lib" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.LibFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.FolderSubFolderNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -763,12 +875,16 @@
       <created>1391542459069</created>
       <updated>1391542459069</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Create occupation rspec test">
+      <created>1392157060832</created>
+      <updated>1392157060832</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-4" width="1922" height="1085" extended-state="6" />
-    <editor active="false" />
+    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.4997236" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.4997236" order="7" side_tool="false" content_ui="tabs" />
@@ -776,14 +892,14 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16141514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21282476" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36232656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40298507" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958158" sideWeight="0.4997236" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29408512" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.5002764" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.4997236" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.4997236" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3294979" sideWeight="0.4997236" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -824,7 +940,8 @@
     <MESSAGE value="interim checking troubelshooting CES exports" />
     <MESSAGE value="massaging import tasks to improve results &#10;" />
     <MESSAGE value="Fix minor bug in ces_state_metro import&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix minor bug in ces_state_metro import&#10;" />
+    <MESSAGE value="Create occupation rspec test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create occupation rspec test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -835,46 +952,12 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/services/bls_data_importer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="76" selection-start="2114" selection-end="2114" vertical-scroll-proportion="0.0" vertical-offset="1990" max-vertical-offset="2538" />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/1e706a33/5ed7b57f-72b3-46a7-be64-2b163f200940/itjobstudyv2.public.area_types">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108" />
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/data/wiggins/old_data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="241" column="65" selection-start="18843" selection-end="18843" vertical-scroll-proportion="-149.58621" vertical-offset="0" max-vertical-offset="8946" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/lib/data/it_occupations.csv">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/1e706a33/5ed7b57f-72b3-46a7-be64-2b163f200940/itjobstudyv2.public.occupational_statistics">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108" />
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/report.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/data/it_occupations.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="936" />
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/data/it_industries.csv">
@@ -931,20 +1014,12 @@
         <state line="3" column="12" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/data/ce.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="395.0345" vertical-offset="11456" max-vertical-offset="15228" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/lib/data/ce.industry">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/data/ce.industry">
       <provider selected="true" editor-type-id="text-editor">
         <state line="872" column="0" selection-start="49993" selection-end="49993" vertical-scroll-proportion="0.7432675" vertical-offset="15282" max-vertical-offset="16938" />
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/import_05_industry.rake">
@@ -962,22 +1037,9 @@
         <state line="333" column="14" selection-start="9552" selection-end="9558" vertical-scroll-proportion="-171.25714" vertical-offset="0" max-vertical-offset="7722" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/data_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="35" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/occupational_statistic.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="558" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/data/wiggins/data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="746" column="108" selection-start="61833" selection-end="61833" vertical-scroll-proportion="0.036088474" vertical-offset="13397" max-vertical-offset="19548" />
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/import_ces_national.rake">
@@ -998,19 +1060,6 @@
     <entry file="file://$PROJECT_DIR$/lib/tasks/import_oes_data.rake">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="3" selection-start="761" selection-end="761" vertical-scroll-proportion="0.6450512" vertical-offset="0" max-vertical-offset="586" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/export_olo_columbia_data.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="52" selection-start="1172" selection-end="1172" vertical-scroll-proportion="0.58361775" vertical-offset="0" max-vertical-offset="882" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/data/sm.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="272" column="94" selection-start="13101" selection-end="13101" vertical-scroll-proportion="0.25852782" vertical-offset="4752" max-vertical-offset="8352" />
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/helpers/reports_helper_spec.rb">
@@ -1034,11 +1083,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/data/oe.statemsa">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="8506" max-vertical-offset="11772" />
-      </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="8506" max-vertical-offset="11772" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/occupational_statistic_spec.rb">
@@ -1066,33 +1115,14 @@
         <state line="29" column="4" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.5637149" vertical-offset="0" max-vertical-offset="926" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="60" selection-start="1220" selection-end="1220" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="1314">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/factories/occupations.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="79" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="102" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="936" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/occupation.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="33" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/area.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="7" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/500.html">
@@ -1110,30 +1140,122 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.2814238" vertical-offset="253" max-vertical-offset="1152" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/factories/areas.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="87" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+        <state line="18" column="7" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="432" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/data/ce.txt">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="660" column="13" selection-start="34497" selection-end="34497" vertical-scroll-proportion="-12.75862" vertical-offset="11510" max-vertical-offset="15228" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/data/wiggins/sent_data_to_Steve.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="746" column="81" selection-start="61591" selection-end="61591" vertical-scroll-proportion="263.72415" vertical-offset="21076" max-vertical-offset="21960" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/data/wiggins/old_data.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="464" column="13" selection-start="36325" selection-end="36325" vertical-scroll-proportion="-9.137931" vertical-offset="8087" max-vertical-offset="8946" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/area.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="7" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="10" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="1440">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/lib/data/ce.datatype">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="7" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="432">
+        <state line="11" column="0" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/data_type.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="1" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/data/sm.data_type">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="52" selection-start="432" selection-end="432" vertical-scroll-proportion="0.15982242" vertical-offset="0" max-vertical-offset="252" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/export_olo_columbia_data.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="73" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="882">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/industry_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/data/sm.txt">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="8352">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/factories/areas.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="3" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1139" selection-end="1224" vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="1314">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="5" selection-start="1789" selection-end="1789" vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="1008">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/area_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/occupation_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="64" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="90" selection-start="1477" selection-end="1477" vertical-scroll-proportion="0.66090715" vertical-offset="468" max-vertical-offset="1440">
+        <state line="36" column="50" selection-start="942" selection-end="942" vertical-scroll-proportion="0.7192009" vertical-offset="0" max-vertical-offset="901">
           <folding />
         </state>
       </provider>
