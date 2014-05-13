@@ -15,4 +15,10 @@
 
 class Industry < ActiveRecord::Base
   has_many :report_criteriums, as: :criteriable
+  default_scope order('code ASC')
+
+  def formatted_code
+    stringed_code = self.code.to_s
+    return "#{stringed_code[0..1]}-#{stringed_code[2,4]}"
+  end
 end
