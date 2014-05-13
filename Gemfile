@@ -42,6 +42,8 @@ group :test, :development do
   gem 'better_errors'
   gem 'pry-rails'
   gem 'debugger' unless ENV["RM_INFO"]
+  #used to test calls, planning to have separate gem for development
+  gem 'rest-client'
 end
 
 group :test do

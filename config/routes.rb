@@ -59,4 +59,6 @@ Itjobstudyv2::Application.routes.draw do
   #   end
 
   resources :bls_column_mappers
+
+  resources :areas
 end

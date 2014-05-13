@@ -229,6 +229,7 @@ Field #/Data Element	Length		Value(Example)
 
 5.  industry_code	  8		70722000
 
+
 6.  data_type_code	  2		01
 
 7.  seasonal		  1		S				
