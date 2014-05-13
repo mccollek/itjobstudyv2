@@ -1,36 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3a6c81d-f8f1-46a0-bcf5-3045f2057d19" name="Default" comment="Create occupation rspec test&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/bls_column_mapper_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/ce.datatype" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/ce.footnote" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/ce.industry" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/ce.period" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/ce.seasonal" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/ce.series" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/ce.supersector" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/it_occupations.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.area" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.areatype" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.datatype" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.industry" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.occugroup" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.occupation" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.seasonal" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/oe.statemsa" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/report_criterium_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/report_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/sm.area" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/sm.data_type" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/sm.industry" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/sm.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/data/states.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/export_olo_columbia_data.rake" afterPath="$PROJECT_DIR$/lib/tasks/export_olo_columbia_data.rake" />
+    <list default="true" id="f3a6c81d-f8f1-46a0-bcf5-3045f2057d19" name="Default" comment="Realized I never imported previous year municipal data from oes and so don't have it to report.  The JSON link does not have this data available so playing with the spider and importer to pull it in instead.  &#10;&#10;Worked on reviewing the current pull.  It doesn't recognize the metro pages as valid links.  Updated the nokogiri search expression and it now seems to be pulling more in.  Tweaked the has_data? method">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/bls_oes_spider.rb" afterPath="$PROJECT_DIR$/app/services/bls_oes_spider.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/itjobstudyv2.iml" afterPath="$PROJECT_DIR$/.idea/itjobstudyv2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="itjobstudyv2.iws" />
@@ -58,19 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="reports_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="10" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="1440">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="export_olo_columbia_data.rake" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/tasks/export_olo_columbia_data.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="73" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="882">
+            <state line="28" column="73" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="882">
               <folding />
             </state>
           </provider>
@@ -82,7 +46,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="8352">
+            <state line="19" column="0" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="8370">
               <folding />
             </state>
           </provider>
@@ -112,16 +76,25 @@
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="1139" selection-end="1224" vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="1314">
+            <state line="46" column="0" selection-start="1139" selection-end="1224" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1350">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="occupation_spec.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="occupation_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/models/occupation_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="50" selection-start="942" selection-end="942" vertical-scroll-proportion="0.7192009" vertical-offset="0" max-vertical-offset="901">
+            <state line="32" column="44" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bls_oes_spider.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/services/bls_oes_spider.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="34" selection-start="2509" selection-end="2509" vertical-scroll-proportion="0.6756757" vertical-offset="732" max-vertical-offset="1620">
               <folding />
             </state>
           </provider>
@@ -167,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20140106131809_create_reports.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140106132018_add_ids_to_report_criterium.rb" />
         <option value="$PROJECT_DIR$/app/models/industry.rb" />
         <option value="$PROJECT_DIR$/app/models/report.rb" />
@@ -218,6 +190,7 @@
         <option value="$PROJECT_DIR$/lib/tasks/export_olo_columbia_data.rake" />
         <option value="$PROJECT_DIR$/lib/data/sm.data_type" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
+        <option value="$PROJECT_DIR$/app/services/bls_oes_spider.rb" />
       </list>
     </option>
   </component>
@@ -556,7 +529,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="web.server" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -879,20 +852,29 @@
       <created>1392157060832</created>
       <updated>1392157060832</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Improve reports view, set default industry &amp; occupation sort order and string display&#10;">
+      <created>1399953661014</created>
+      <updated>1399953661014</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Start setup of json importer.  Intent is to pull from BLS source and make a copy if I don't already have the data">
+      <created>1399953708230</created>
+      <updated>1399953708230</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33263597" sideWeight="0.4997236" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.4997236" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.4997236" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16141514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21282476" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40298507" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4079602" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958158" sideWeight="0.4997236" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29408512" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.5002764" order="9" side_tool="true" content_ui="tabs" />
@@ -902,12 +884,11 @@
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3294979" sideWeight="0.4997236" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.4997236" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33263597" sideWeight="0.4997236" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -941,7 +922,9 @@
     <MESSAGE value="massaging import tasks to improve results &#10;" />
     <MESSAGE value="Fix minor bug in ces_state_metro import&#10;" />
     <MESSAGE value="Create occupation rspec test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create occupation rspec test" />
+    <MESSAGE value="Improve reports view, set default industry &amp; occupation sort order and string display&#10;" />
+    <MESSAGE value="Start setup of json importer.  Intent is to pull from BLS source and make a copy if I don't already have the data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start setup of json importer.  Intent is to pull from BLS source and make a copy if I don't already have the data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -952,25 +935,17 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/data/it_occupations.csv">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="936" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/data/it_industries.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="6" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288" />
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/1e706a33/5ed7b57f-72b3-46a7-be64-2b163f200940/itjobstudyv2.public.data_types">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288" />
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/import_08_IT-oLogy_IT_Careers.rake">
@@ -984,19 +959,19 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/1e706a33/5ed7b57f-72b3-46a7-be64-2b163f200940/itjobstudyv2.public.areas">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252" />
       </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
     </entry>
     <entry file="dbDummy://dbtable:/1e706a33/5ed7b57f-72b3-46a7-be64-2b163f200940/itjobstudyv2.public.industries">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288" />
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/import_12_states_to_areas.rake">
@@ -1205,7 +1180,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/export_olo_columbia_data.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="73" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="882">
+        <state line="28" column="73" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="882">
           <folding />
         </state>
       </provider>
@@ -1255,7 +1230,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/occupation_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="50" selection-start="942" selection-end="942" vertical-scroll-proportion="0.7192009" vertical-offset="0" max-vertical-offset="901">
+        <state line="32" column="44" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/bls_oes_spider.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="34" selection-start="2509" selection-end="2509" vertical-scroll-proportion="0.6756757" vertical-offset="732" max-vertical-offset="1620">
           <folding />
         </state>
       </provider>

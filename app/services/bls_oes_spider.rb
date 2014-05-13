@@ -29,6 +29,8 @@ class BlsOesSpider
         else
           child_doc = child_obj.open_source
           state_list = child_doc.xpath('//blockquote/li/a')
+          #for metros
+          #state_list = child_doc.xpath('//td//ul/li/a')
           #bad hack for 2004 national data... going to ignore for now as has_data wouldn't work anyway
           #if child_obj.source_page = "http://www.bls.gov/oes/2004/may/oes_nat.htm"
           #  state_list = child_doc.xpath('//ul[preceding-sibling::p]/li/a')
@@ -72,6 +74,7 @@ class BlsOesSpider
     doc = self.open_source
 
     if doc.at_xpath('//td[preceding-sibling::td[text()="00-0000"]]/text()').present?
+    #if doc.at_xpath('//td//ul/li/a').present?
       print "#{self.source_page} has data\n"
       return true
     else
