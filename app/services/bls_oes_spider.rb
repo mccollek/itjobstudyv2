@@ -2,6 +2,7 @@ class BlsOesSpider
   require 'nokogiri'
   require 'open-uri'
   attr_reader :source_page, :candidate_pages
+
   def initialize args = {}
     @source_page = args.fetch(:source) do
       @source_page = 'http://www.bls.gov/oes/tables.htm'
@@ -15,11 +16,27 @@ class BlsOesSpider
     false
   end
 
-  def build_candidate_page_list
+  def build_candidate_page_list args={}
+    page_type = args.fetch(:type) do
+      page_type = 'state'
+    end
+    if page_type == 'metro'
+      page_parser = 'oessrcma'
+      subpage_search = '//li/a'
+      results_regex = /oes_\d/
+    else
+      page_parser = 'oessrcst'
+      subpage_search = '//blockquote/li/a'
+      results_regex = /oes_\w{2}\./
+    end
     self.reset_candidate_pages
     doc = self.open_source
+    #find all the links in the main page
     results = doc.xpath('//a[contains(text(), "HTML")]')
-    results.each do |result|
+    #filter out the links based on page_type
+    filtered_results = results.select {|r| r.attributes.first[1].value.include? page_parser}
+    #look at each child page for valid grandchildren
+    filtered_results.each do |result|
       high_level_url =  result.attributes.first[1].value
       if high_level_url.count('may')>0    #I don't want the november numbers, 2012 (already imported via csv) or anything before 2003
         child_obj = BlsOesSpider.new(source: 'http://www.bls.gov' + high_level_url)
@@ -28,17 +45,22 @@ class BlsOesSpider
           self.add_candidate(child_obj.source_page)
         else
           child_doc = child_obj.open_source
-          state_list = child_doc.xpath('//blockquote/li/a')
-          #for metros
+          regions_list = child_doc.xpath(subpage_search)
+          links = regions_list.map{|r| r.attributes.first[1].value}
+          print "LINKS ARE: #{links}"
+          results = links.select {|r| r =~ results_regex }
+          #for states:
+          #state_list = child_doc.xpath('//blockquote/li/a')
+          #for metros :
           #state_list = child_doc.xpath('//td//ul/li/a')
           #bad hack for 2004 national data... going to ignore for now as has_data wouldn't work anyway
           #if child_obj.source_page = "http://www.bls.gov/oes/2004/may/oes_nat.htm"
-          #  state_list = child_doc.xpath('//ul[preceding-sibling::p]/li/a')
+            #  state_list = child_doc.xpath('//ul[preceding-sibling::p]/li/a')
           #end
-          unless state_list.nil?
+          unless regions_list.nil?
             child_path = Pathname.new(child_obj.source_page)
             state_dir = child_path.dirname.to_s
-            state_list.each do |state_source|
+            regions_list.each do |state_source|
               state_filename = state_source.first[1]
               if state_filename.count('/')>0
                 state_url = 'http://www.bls.gov' + state_filename
