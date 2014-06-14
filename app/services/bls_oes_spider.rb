@@ -47,8 +47,8 @@ class BlsOesSpider
           child_doc = child_obj.open_source
           regions_list = child_doc.xpath(subpage_search)
           links = regions_list.map{|r| r.attributes.first[1].value}
-          print "LINKS ARE: #{links}"
           results = links.select {|r| r =~ results_regex }
+          print "LINKS ARE: #{results}"
           #for states:
           #state_list = child_doc.xpath('//blockquote/li/a')
           #for metros :
@@ -57,15 +57,14 @@ class BlsOesSpider
           #if child_obj.source_page = "http://www.bls.gov/oes/2004/may/oes_nat.htm"
             #  state_list = child_doc.xpath('//ul[preceding-sibling::p]/li/a')
           #end
-          unless regions_list.nil?
+          unless results.nil?
             child_path = Pathname.new(child_obj.source_page)
             state_dir = child_path.dirname.to_s
-            regions_list.each do |state_source|
-              state_filename = state_source.first[1]
-              if state_filename.count('/')>0
-                state_url = 'http://www.bls.gov' + state_filename
+            results.each do |result|
+              if result.count('/')>0
+                state_url = 'http://www.bls.gov' + result
               else
-                state_url = state_dir + '/' + state_filename
+                state_url = state_dir + '/' + result
               end
               state_page = BlsOesSpider.new(source: state_url)
               print "looking at lower level #{state_page.source_page} \n"
