@@ -78,7 +78,6 @@ class BlsOesSpider
 
       end
     end
-    debugger
     return self.candidate_pages
   end
 

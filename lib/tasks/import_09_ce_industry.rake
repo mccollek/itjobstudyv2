@@ -2,7 +2,7 @@ require 'csv'
 
 desc "Import industries from txt file. Since CE has summary occupations that overlap OE, " + \
       "check for the summaries and code them with the CE custom code"
-task :import => [:environment] do
+task :import_industry => [:environment] do
   fileset = ["lib/data/ce.industry","lib/data/sm.industry"]
   fileset.each do |file|
     CSV.foreach(file, :headers => true, :col_sep => "\t" ) do |row|

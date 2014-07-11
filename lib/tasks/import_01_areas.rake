@@ -1,7 +1,7 @@
 require 'csv'
 
 desc "Import Area from txt file"
-task :import => [:environment] do
+task :import_area => [:environment] do
   fileset = ["lib/data/oe.area","lib/data/sm.area"]
   fileset.each  do |file|
     CSV.foreach(file, :headers => true, :col_sep => "\t" ) do |row|

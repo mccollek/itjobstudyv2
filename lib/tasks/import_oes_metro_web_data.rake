@@ -1,5 +1,5 @@
 
-desc "import data from 2011"
+desc "import oes data from the website"
 
 task :import_oes_metro_web_data => [:environment] do
   statistic_pages = []
@@ -13,7 +13,7 @@ task :import_oes_metro_web_data => [:environment] do
       data_month = directory_elements[5]
       if data_year > 2003 && data_year < 2012 &&  data_month == 'may'  # I don't want November numbers
         p "page #{page} has a year of #{data_year}\n"
-        statistic_pages.push(year: data_year, page_source: page)
+        statistic_pages.push(year: data_year,    page_source: page)
       end
     end
     File.open('lib/data/pages_file', 'w') {|f| JSON.dump(statistic_pages, f)}
