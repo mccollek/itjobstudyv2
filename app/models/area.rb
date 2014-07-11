@@ -13,6 +13,7 @@
 
 class Area < ActiveRecord::Base
   belongs_to :area_type
+  has_many :report_criteriums, as: :criteriable
 
   def self.parse_area(attribute)
     if attribute =~ /^[a-zA-Z]*/

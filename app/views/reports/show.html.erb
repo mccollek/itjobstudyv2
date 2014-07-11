@@ -24,6 +24,15 @@
 </ul>
 
 
+</p><p>
+  <strong>Areas</strong>
+<ul>
+  <% @report.areas.each do |area| %>
+      <li><%= "#{area.code.to_s}: #{area.name}" %></li>
+  <%end%>
+</ul>
+
+
 </p>
 
         <%= link_to 'Edit', edit_report_path(@report) %> |

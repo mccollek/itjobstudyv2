@@ -15,6 +15,18 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
+
+    <div class='span7'>
+      <p>Search and add the Occupations you'd like to monitor here. </p> <br />
+      <%= f.collection_select(:occupation_ids, Occupation.all.order(:name), :id, :name, {:selected => @report.occupation_ids }, {multiple:true, class: 'chosen-interests'}) %>
+      <br /> <br />
+    </div>
+
+    <div class='span7'>
+      <p>Search and add the Areas you'd like to monitor here</p> <br />
+      <%= f.collection_select(:area_ids, Area.all.order(:name), :id, :name, {:selected => @report.area_ids }, {multiple:true, class: 'chosen-orgs'}) %>
+      <br /> <br />
+    </div>
   <div class="actions">
     <%= f.submit %>
   </div>
