@@ -122,7 +122,7 @@ class BlsDataImporter
         area = Area.where(state: code.upcase).first
       when 3
         area = Area.find(1)
-      when 5
+      when 5..7
         area = Area.where(code: code.to_i).first
       else
         raise("Can't find the area!!")
