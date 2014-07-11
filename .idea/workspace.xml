@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3a6c81d-f8f1-46a0-bcf5-3045f2057d19" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/reports.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reports/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/reports/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/area.rb" afterPath="$PROJECT_DIR$/app/models/area.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/itjobstudyv2.iml" afterPath="$PROJECT_DIR$/.idea/itjobstudyv2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/report.rb" afterPath="$PROJECT_DIR$/app/models/report.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reports/show.html.erb" afterPath="$PROJECT_DIR$/app/views/reports/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/reports_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="itjobstudyv2.iws" />
@@ -69,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/reports/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50276244" vertical-offset="159" max-vertical-offset="702">
-              <caret line="24" column="34" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+            <state vertical-scroll-proportion="-5.4444447" vertical-offset="159" max-vertical-offset="702">
+              <caret line="17" column="46" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reports_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="reports_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
-              <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.41337907" vertical-offset="839" max-vertical-offset="1440">
+              <caret line="60" column="69" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -144,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/data/ce.industry" />
         <option value="$PROJECT_DIR$/lib/tasks/import_02_data_types.rake" />
         <option value="$PROJECT_DIR$/lib/tasks/import_11_ce_data.rake" />
         <option value="$PROJECT_DIR$/lib/tasks/import_11_ce_national_data.rake" />
@@ -195,6 +185,7 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/reports.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+        <option value="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
       </list>
     </option>
   </component>
@@ -1000,7 +991,11 @@
       <created>1405082630175</created>
       <updated>1405082630175</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="reports forms work.  Occupations and Areas multi-selects setup with chosen-rails.">
+      <created>1405085015208</created>
+      <updated>1405085015208</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1066,7 +1061,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="interim check-in: mining all valid URLs from 2011-2013.  Need to modify BlsOesSpider.has_data? to find valid pages in 2009." />
     <MESSAGE value="Pulling all valid URLs 2004-2013&#10;" />
     <MESSAGE value="Valid URLs done (see comments in bls_oes_spider), on to data extraction&#10;" />
     <MESSAGE value="Pulling headers from pages from 2004 on, ready to start importing!" />
@@ -1091,7 +1085,8 @@
     <MESSAGE value="page collection for metro import completed." />
     <MESSAGE value="lots of minor clean-up&#10;" />
     <MESSAGE value="oes metro data string is up to 7 characters.  Changing case statement to match." />
-    <option name="LAST_COMMIT_MESSAGE" value="oes metro data string is up to 7 characters.  Changing case statement to match." />
+    <MESSAGE value="reports forms work.  Occupations and Areas multi-selects setup with chosen-rails." />
+    <option name="LAST_COMMIT_MESSAGE" value="reports forms work.  Occupations and Areas multi-selects setup with chosen-rails." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1438,14 +1433,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
-          <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/occupation.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="702">
@@ -1490,8 +1477,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/reports/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50276244" vertical-offset="159" max-vertical-offset="702">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        <state vertical-scroll-proportion="-5.4444447" vertical-offset="159" max-vertical-offset="702">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41337907" vertical-offset="839" max-vertical-offset="1440">
+          <caret line="60" column="69" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
           <folding />
         </state>
       </provider>
