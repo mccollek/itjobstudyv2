@@ -25,6 +25,17 @@
 
 
 </p><p>
+  <strong>Data Types</strong>
+<ul>
+  <% @report.data_types.each do |data_type| %>
+      <li><%= "#{data_type.code.to_s}: #{data_type.name}" %></li>
+  <%end%>
+</ul>
+
+
+</p>
+
+</p><p>
   <strong>Areas</strong>
 <ul>
   <% @report.areas.each do |area| %>
