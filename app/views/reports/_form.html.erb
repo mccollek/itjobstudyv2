@@ -17,13 +17,19 @@
   </div>
 
     <div class='span7'>
-      <p>Search and add the Occupations you'd like to monitor here. </p> <br />
+      <p>Search and add the Occupations on which you'd like to report here. </p> <br />
       <%= f.collection_select(:occupation_ids, Occupation.all.order(:name), :id, :name, {:selected => @report.occupation_ids }, {multiple:true, class: 'chosen-interests'}) %>
       <br /> <br />
     </div>
 
     <div class='span7'>
-      <p>Search and add the Areas you'd like to monitor here</p> <br />
+      <p>Search and add the Industries on which you'd like to report here. </p> <br />
+      <%= f.collection_select(:industry_ids, Industry.all.order(:name), :id, :name, {:selected => @report.industry_ids }, {multiple:true, class: 'chosen-orgs'}) %>
+      <br /> <br />
+    </div>
+
+    <div class='span7'>
+      <p>Search and add the Areas on which you'd like to report here.</p> <br />
       <%= f.collection_select(:area_ids, Area.all.order(:name), :id, :name, {:selected => @report.area_ids }, {multiple:true, class: 'chosen-orgs'}) %>
       <br /> <br />
     </div>
