@@ -24,13 +24,18 @@
 
     <div class='span7'>
       <p>Search and add the Industries on which you'd like to report here. </p> <br />
-      <%= f.collection_select(:industry_ids, Industry.all.order(:name), :id, :name, {:selected => @report.industry_ids }, {multiple:true, class: 'chosen-orgs'}) %>
+      <%= f.collection_select(:industry_ids, Industry.all.order(:name), :id, :name, {:selected => @report.industry_ids }, {multiple:true, class: 'chosen-industries'}) %>
       <br /> <br />
     </div>
 
     <div class='span7'>
+      <p>Search and add the Data Types on which you'd like to report here.</p> <br />
+      <%= f.collection_select(:data_type_ids, DataType.all.order(:name), :id, :name, {:selected => @report.data_type_ids }, {multiple:true, class: 'chosen-data-types'}) %>
+      <br /> <br />
+    </div>
+    <div class='span7'>
       <p>Search and add the Areas on which you'd like to report here.</p> <br />
-      <%= f.collection_select(:area_ids, Area.all.order(:name), :id, :name, {:selected => @report.area_ids }, {multiple:true, class: 'chosen-orgs'}) %>
+      <%= f.collection_select(:area_ids, Area.all.order(:name), :id, :name, {:selected => @report.area_ids }, {multiple:true, class: 'chosen-areas'}) %>
       <br /> <br />
     </div>
   <div class="actions">
