@@ -1,7 +1,7 @@
 require 'csv'
 
 desc "Export IT-oLogy Columbia Data"
-task :export_olo_sc_data => [:environment] do
+task :export_olo_national_data => [:environment] do
   data_file = 'lib/data/wiggins/sc-data.csv'
   CSV.open(data_file, "wb") do |row|
     OccupationalStatistic.where(area_id: [1,584],

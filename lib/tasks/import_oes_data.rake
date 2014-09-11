@@ -2,7 +2,7 @@ require 'csv'
 
 desc "Import Occupational Employment Data from txt file"
 task :import_oes_data => [:environment] do
-  file = "lib/data/oe.data.0.Current"
+  file = "lib/data/2013-oe.data.0.Current"
   puts "Importing OE data"
 
   CSV.foreach(file, :headers => true, :col_sep => "\t" ) do |row|

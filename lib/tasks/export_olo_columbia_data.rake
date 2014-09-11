@@ -5,7 +5,7 @@ task :export_olo_columbia_data => [:environment] do
   data_file = 'lib/data/wiggins/cae-data.csv'
   CSV.open(data_file, "wb") do |row|
     OccupationalStatistic.where(area_id: [75,584],
-                              year: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+                              year: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
                               data_type_id: DataType.where(code: 1, data_category: 'OES').first.id,
                               period: ['S01', NIL],
                               industry_id: [1, NIL],
@@ -14,7 +14,7 @@ task :export_olo_columbia_data => [:environment] do
       row << [stat.year, stat.area.name, stat.occupation.code, stat.occupation.name, stat.data_type.name, stat.value, 'OES', stat.original_series]
     end
     OccupationalStatistic.where(area_id: [75,584],
-                              year: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+                              year: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
                               data_type_id: DataType.where(code: 4, data_category: 'OES').first.id,
                               period: ['S01', NIL],
                               industry_id: [1, NIL],
@@ -23,7 +23,7 @@ task :export_olo_columbia_data => [:environment] do
       row << [stat.year, stat.area.name, stat.occupation.code, stat.occupation.name, stat.data_type.name, stat.value, 'OES', stat.original_series]
     end
     OccupationalStatistic.where(area_id: [75,584],
-                                year: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+                                year: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
                                 data_type_id: DataType.where(code:11, data_category: 'CES'),
                                 period: 'M12',
                                 industry_id: Report.last.industries.to_a).each do |stat|
@@ -32,7 +32,7 @@ task :export_olo_columbia_data => [:environment] do
     end
 
     OccupationalStatistic.where(area_id: [75,584],
-                                year: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
+                                year: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
                                 data_type_id: DataType.where(code: 1, data_category: 'CES').first.id,
                                 period: 'M12',
                                 industry_id: Report.last.industries.to_a).each do |stat|

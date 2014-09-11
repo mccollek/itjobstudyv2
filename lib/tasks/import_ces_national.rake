@@ -10,16 +10,35 @@ task :import_ces_national => [:environment] do
       series_id = row[0].gsub(' ', '')
       if series_id == 'CEU6056133034' then start=true end
       if start
-        d = OccupationalStatistic.new
+        # d = OccupationalStatistic.new
         p "importing series id: #{series_id} "
-        d.original_series = series_id
-        d.area_id = 1
-        d.industry = Industry.where(code: series_id[3..10].to_i).first
-        d.data_type = DataType.where(code: series_id[11..12], data_category: 'CES').first
-        d.year = row[1]
-        d.period = row[2]
-        d.value = row[3]
-        d.save
+        original_series = series_id
+        area_id = 1
+        industry = Industry.where(code: series_id[3..10].to_i).first
+        data_type = DataType.where(code: series_id[11..12], data_category: 'CES').first
+        year = row[1]
+        period = row[2]
+        value_final = row[3]
+        os = OccupationalStatistic.find_or_initialize_by(data_type: data_type,
+                                                         value: value_final,
+                                                         year: year,
+                                                         area: area_id,
+                                                         industry: industry,
+                                                         original_series: original_series,
+                                                         period: period)
+        if os.new_record?
+          statistic_attributes.each do |statistic_attribute_set|
+            os.send("#{statistic_attribute_set[:stat_object].downcase}=",
+                    statistic_attribute_set[:stat_object].constantize.where(statistic_attribute_set[:stat_attribute].to_sym => statistic_attribute_set[:stat_value]).first)
+          end
+          p "about to save the following stat: \n"
+          pp os
+          #debugger
+          os.save!
+        else
+          p "record of type #{data_type.name} with value #{value_final}  already exists \n"
+        end
+        # d.save
       end
     end
 end
