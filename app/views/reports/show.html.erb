@@ -28,7 +28,7 @@
   <strong>Data Types</strong>
 <ul>
   <% @report.data_types.each do |data_type| %>
-      <li><%= "#{data_type.code.to_s}: #{data_type.name}" %></li>
+      <li><%= data_type.typed_name %></li>
   <%end%>
 </ul>
 
@@ -48,3 +48,16 @@
 
         <%= link_to 'Edit', edit_report_path(@report) %> |
 <%= link_to 'Back', reports_path %>
+
+<hr>
+<table> <% @results.each do |r| %>
+      <tr>
+        <td><%=r.area.name%></td>
+        <td><%=r.period%></td>
+        <td><%=r.year%></td>
+        <td><%=r.occupation.name%></td>
+        <td><%=r.data_type.name%></td>
+        <td><%=r.value%></td>
+      </tr>
+    <%end%>
+</table>

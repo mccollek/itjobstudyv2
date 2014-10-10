@@ -30,7 +30,7 @@
 
     <div class='span7'>
       <p>Search and add the Data Types on which you'd like to report here.</p> <br />
-      <%= f.collection_select(:data_type_ids, DataType.all.order(:name), :id, :name, {:selected => @report.data_type_ids }, {multiple:true, class: 'chosen-data-types'}) %>
+      <%= f.collection_select(:data_type_ids, DataType.all.order(:data_category, :name), :id, :typed_name, {:selected => @report.data_type_ids }, {multiple:true, class: 'chosen-data-types'}) %>
       <br /> <br />
     </div>
     <div class='span7'>

@@ -10,6 +10,12 @@ class ReportsController < ApplicationController
   # GET /reports/1
   # GET /reports/1.json
   def show
+    @results = OccupationalStatistic.where(area_id: @report.areas.map{|a| a.id},
+                                year: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
+                                data_type_id: @report.data_types.map{|dt| dt.id},
+                                period: ['S01', NIL],
+                                industry_id: (@report.industries.map{|i| i.id}.present? ? @report.industries.map{|i| i.id}: NIL),
+                                occupation_id: @report.occupations.map{|o| o.id})
   end
 
   # GET /reports/new

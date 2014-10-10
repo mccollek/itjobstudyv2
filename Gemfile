@@ -48,6 +48,7 @@ group :test, :development do
   gem 'debugger' unless ENV["RM_INFO"]
   #used to test calls, planning to have separate gem for development
   gem 'rest-client'
+  gem 'binding_of_caller'
 end
 
 group :test do

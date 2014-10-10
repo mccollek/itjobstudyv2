@@ -13,4 +13,8 @@
 
 class DataType < ActiveRecord::Base
   has_many :report_criteriums, as: :criteriable
+
+  def typed_name
+    "#{self.data_category}: #{self.name}"
+  end
 end
