@@ -13,6 +13,7 @@
 #
 
 class Occupation < ActiveRecord::Base
+  has_many :occupational_statistics
   has_many :report_criteriums, as: :criteriable
   validates :name, presence: true
   validates :code, presence: true

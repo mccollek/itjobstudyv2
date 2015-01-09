@@ -14,6 +14,7 @@
 #
 
 class Industry < ActiveRecord::Base
+  has_many :occupational_statistics
   has_many :report_criteriums, as: :criteriable
   default_scope order('code ASC')
 

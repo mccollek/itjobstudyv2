@@ -10,4 +10,5 @@
 #
 
 class Seasonal < ActiveRecord::Base
+  has_many :occupational_statistics
 end

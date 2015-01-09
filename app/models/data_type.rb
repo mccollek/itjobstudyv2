@@ -12,7 +12,9 @@
 #
 
 class DataType < ActiveRecord::Base
+  has_many :occupational_statistics
   has_many :report_criteriums, as: :criteriable
+  has_many :bls_column_mappers
 
   def typed_name
     "#{self.data_category}: #{self.name}"

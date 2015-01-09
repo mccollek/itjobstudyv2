@@ -12,6 +12,7 @@
 #
 
 class Area < ActiveRecord::Base
+  has_many :occupational_statistics
   belongs_to :area_type
   has_many :report_criteriums, as: :criteriable
 

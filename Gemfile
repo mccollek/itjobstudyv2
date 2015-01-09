@@ -49,6 +49,7 @@ group :test, :development do
   #used to test calls, planning to have separate gem for development
   gem 'rest-client'
   gem 'binding_of_caller'
+  gem 'railroady'
 end
 
 group :test do

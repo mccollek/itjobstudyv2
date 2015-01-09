@@ -5,8 +5,8 @@
     <option name="compassSupportEnabled" value="true" />
     <option name="importPaths">
       <list>
-        <option value="$USER_HOME$/.rvm/gems/ruby-2.1.0@itjobstudyv2/gems/compass-0.12.6/frameworks/blueprint/stylesheets" />
         <option value="$USER_HOME$/.rvm/gems/ruby-2.1.0@itjobstudyv2/gems/compass-0.12.6/frameworks/compass/stylesheets" />
+        <option value="$USER_HOME$/.rvm/gems/ruby-2.1.0@itjobstudyv2/gems/compass-0.12.6/frameworks/blueprint/stylesheets" />
       </list>
     </option>
   </component>
@@ -156,6 +156,7 @@
     </content>
     <orderEntry type="jdk" jdkName="RVM: ruby-2.1.0 [itjobstudyv2]" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="compass-library" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v4.0.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v4.0.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v4.0.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
@@ -167,8 +168,9 @@
     <orderEntry type="library" scope="PROVIDED" name="arel (v4.0.1, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="atomic (v1.1.14, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="better_errors (v1.1.0, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="binding_of_caller (v0.7.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.1.4, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.5.1, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.7.8, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capybara (v2.2.1, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="celluloid (v0.15.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="chosen-rails (v1.1.0, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
@@ -179,6 +181,7 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.3, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="compass (v0.12.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="compass-rails (v2.0.0, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.5, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.0.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
@@ -195,6 +198,7 @@
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.9, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v1.5.3, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v3.0.4, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.1, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="launchy (v2.4.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="libv8 (v3.16.14.3, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="listen (v2.4.0, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
@@ -203,6 +207,7 @@
     <orderEntry type="library" scope="PROVIDED" name="method_source (v0.8.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25.1, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.5.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest (v4.7.5, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.8.4, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.1, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.17.1, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
@@ -211,6 +216,7 @@
     <orderEntry type="library" scope="PROVIDED" name="pry-rails (v0.3.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.5.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="railroady (v1.3.0, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v4.0.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v4.0.2, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.1.1, RVM: ruby-2.1.0 [itjobstudyv2]) [gem]" level="application" />
@@ -246,4 +252,3 @@
     <I18N_FOLDERS number="1" string0="$MODULE_DIR$/config/locales" />
   </component>
 </module>
-
